@@ -255,7 +255,6 @@ body {
   background-color: #fff;
   border-radius: 5px 5px 0 0;
   padding: 10px 10px 0 10px;
-  /* border-bottom: solid 1px black; */
 }
 .user-email {
   margin-bottom: 5px;
@@ -309,6 +308,26 @@ body {
   border-bottom: 1px solid #aaa;
   padding-bottom: 10px;
   position: relative;
+}
+/* 유효성 검사 배너 */
+.validation {
+  margin-top: 20px;
+}
+.validation li {
+  height: 30px;
+  background: lightgray linear-gradient(to bottom, lightgray 0%, white 100%);
+  border: solid 1px lightgray;
+  border-radius: 15px;
+  line-height: 30px;
+}
+.validation li:last-child {
+  margin-top: 10px;
+}
+.validation-link {
+  display: block;
+}
+.validation-icon {
+  margin: 0 10px;
 }
 
 /* 슬로건 */
