@@ -338,33 +338,56 @@ body {
   background: #aaa linear-gradient(to bottom, #aaa, #ccc) repeat;
   margin-top: 20px;
   padding: 15px;
-  border: solid 1px gray;
+  border: solid 1px #aaa;
   border-radius: 5px;
-  display: flow-root;
 }
 .term-title {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 .term-list {
   margin-top: 15px;
 }
+.term-list div {
+  margin-top: 10px;
+  display: flow-root;
+}
 .term-list-subject {
-  background-color: pink;
   width: 145px;
-  margin-bottom: 5px;
   font-size: 16px;
   font-weight: 600;
-  color: darkblue;
+  color: #296897;
+}
+.odd .term-list-subject {
   float: right;
 }
-.term-list-thumbnail {
+.even .term-list-subject {
   float: left;
 }
-.term-list-brief {
-  background-color: skyblue;
-  width: 145px;
+/* 폰트 상단 시작점과 이미지 상단 시작점 일치 */
+.term-list-thumbnail {
+  position: relative;
+  top: 2px;
+}
+.odd .term-list-thumbnail {
+  float: left;
+}
+.even .term-list-thumbnail {
   float: right;
+}
+.term-list-thumbnail img {
+  vertical-align: top;
+}
+.term-list-brief {
+  width: 145px;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+.odd .term-list-brief {
+  float: right;
+}
+.even .term-list-brief {
+  float: left;
 }
 
 /* 슬로건 */
