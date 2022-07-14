@@ -321,7 +321,7 @@ body {
 }
 .validation-list a {
   background: url("./images/validation_icon.png") no-repeat 15px 50% / 16px 16px,
-    #aaa linear-gradient(to bottom, #ccc, #aaa) repeat;
+    #aaa linear-gradient(to bottom, #aaa, #ccc) repeat;
   border: solid 1px gray;
   border-radius: 50px;
   display: block;
@@ -337,21 +337,34 @@ body {
 .term {
   background: #aaa linear-gradient(to bottom, #aaa, #ccc) repeat;
   margin-top: 20px;
+  padding: 15px;
   border: solid 1px gray;
   border-radius: 5px;
-  padding: 10px;
+  display: flow-root;
 }
 .term-title {
+  font-size: 16px;
   font-weight: 600;
-  margin-bottom: 10px;
 }
-.term-img {
+.term-list {
+  margin-top: 15px;
+}
+.term-list-subject {
+  background-color: pink;
+  width: 145px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  color: darkblue;
+  float: right;
+}
+.term-list-thumbnail {
   float: left;
-  margin-right: 10px;
 }
-.term h3 {
-  font-weight: 600;
-  color: blue;
+.term-list-brief {
+  background-color: skyblue;
+  width: 145px;
+  float: right;
 }
 
 /* 슬로건 */
