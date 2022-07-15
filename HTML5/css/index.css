@@ -428,6 +428,51 @@ body {
   border: 0;
   border-radius: 4px;
 }
+/* 공지사항 및 자료실 */
+.board {
+  background-color: yellow;
+  position: relative;
+  margin-top: 20px;
+  font-size: 15px;
+}
+.board-section:not(.is-select) .board-panel,
+.board-section:not(.is-select) .board-more {
+  display: none;
+}
+.board-section button {
+  border-radius: 5px 5px 0 0;
+  padding: 5px 10px;
+  float: left;
+}
+.board-panel {
+  background-color: pink;
+  padding-top: 30px;
+}
+.board-section:not(.is-select) button {
+  background: #ccc linear-gradient(to bottom, #ccc, #eee) repeat;
+  border: 1px solid #aaa;
+  color: #aaa;
+}
+.is-select button {
+  background-color: #fff;
+  border: 1px solid orangered;
+  border-bottom-color: #fff;
+  color: orangered;
+}
+.board-panel li {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.board-panel a {
+  display: inline-block;
+}
+
+.board-more {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 
 /* 슬로건 */
 .slogan {
