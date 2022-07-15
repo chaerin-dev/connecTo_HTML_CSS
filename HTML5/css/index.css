@@ -433,31 +433,35 @@ body {
   position: relative;
   margin-top: 20px;
   font-size: 15px;
-  height: 214px;
-  background-color: yellow;
+  /* height: 214px; */
+  min-height: 214px;
 }
 .board-tab {
   /* border-radius: 5px 5px 0 0;
   padding: 5px 10px; */
-  float: left;
   border: 1px solid #aaa;
   border-radius: 5px 5px 0 0;
   background: #ccc;
   padding: 10px 15px;
   color: #666;
+  position: absolute;
+  top: 0;
 }
 .board-section.is-select .board-tab {
   color: #ed552f;
   border-color: currentColor currentColor #fff currentColor;
   background: #fff;
+  z-index: 10;
+}
+.notice-tab {
+  left: 0;
+}
+.archive-tab {
+  left: 83px;
 }
 .board-panel {
-  width: 100%;
   display: none;
-  /* background-color: pink; */
-  position: absolute;
-  top: 45px;
-  left: 0;
+  padding-top: 45px;
 }
 .board-section.is-select .board-panel {
   display: flex;
