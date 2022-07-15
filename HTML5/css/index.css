@@ -107,7 +107,7 @@ body {
   font-size: 1.6rem;
   font-weight: 700;
   color: #fff;
-  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+  text-shadow: -1px 0 0 #000, 0 1px 0 #000, 1px 0 0 #000, 0 -1px 0 #000;
 }
 .menu-item.is-active .menu-button {
   color: #ff0;
@@ -388,6 +388,42 @@ body {
 }
 .even .term-list-brief {
   float: left;
+}
+
+/* 검색 폼 */
+.search-form {
+  display: flex;
+  background: #aaa linear-gradient(to bottom, #aaa, #ccc) repeat;
+  border: solid 1px #aaa;
+  border-bottom: none;
+  border-radius: 20px 20px 0 0;
+  padding: 20px;
+}
+.search-form label {
+  font-size: 16px;
+  margin-right: 20px;
+}
+.search-form::before {
+  content: "\e802";
+  font-family: "fontello";
+  /* display: inline-block; */
+  text-decoration: inherit;
+  /* width: 1em; */
+  /* margin-right: 0.2em; */
+}
+.search-form input {
+  height: 30px;
+  border: solid 2px #aaa;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+.search-form button {
+  height: 30px;
+  padding: 0 10px;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  color: white;
 }
 
 /* 슬로건 */
