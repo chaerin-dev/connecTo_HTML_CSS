@@ -428,17 +428,14 @@ body {
   border: 0;
   border-radius: 4px;
 }
-/* 공지사항 및 자료실 */
-.board {
+/* 공지사항 및 자료실 - 논리적 순서의 마크업에 해당하는 스타일 */
+/* .board {
   position: relative;
   margin-top: 20px;
   font-size: 15px;
-  /* height: 214px; */
   min-height: 214px;
 }
 .board-tab {
-  /* border-radius: 5px 5px 0 0;
-  padding: 5px 10px; */
   border: 1px solid #aaa;
   border-radius: 5px 5px 0 0;
   background: #ccc;
@@ -479,7 +476,6 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  /* 링크 면적 확보 */
   padding: 4px 0;
 }
 .board-more {
@@ -487,7 +483,6 @@ body {
   position: absolute;
   top: -8px;
   right: -8px;
-  /* 클릭 범위 확대 */
   padding: 8px;
 }
 .board-more::before {
@@ -495,6 +490,56 @@ body {
 }
 .board-section.is-select .board-more {
   display: block;
+} */
+
+/* 화면에 보이는 순서의 마크업 -> WAI-ARIA로 접근성 개선에 해당하는 스타일링 */
+.board {
+  position: relative;
+  margin-top: 20px;
+}
+.tab-list {
+  font-size: 0;
+}
+.tab {
+  border: 1px solid #aaa;
+  border-radius: 5px 5px 0 0;
+  background: #ccc;
+  padding: 10px 15px;
+  color: #666;
+  font-size: 14px;
+}
+.tab[aria-selected="true"] {
+  color: #ed552f;
+  border-color: currentColor currentColor #fff currentColor;
+  background: #fff;
+}
+.tab-panel li {
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  width: 100%;
+}
+.board-list a {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 4px 0;
+}
+.tab-panel[aria-labelledby="buttonArchive"] {
+  display: none;
+}
+.board-more {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+}
+.board-more::before {
+  color: hsla(110, 50%, 30%, 1);
+}
+.board-more[aria-labelledby="buttonArchive"] {
+  display: none;
 }
 
 /* 슬로건 */
