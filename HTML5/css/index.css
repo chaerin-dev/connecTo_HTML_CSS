@@ -535,12 +535,101 @@ body {
   right: -8px;
   padding: 8px;
 }
-.board-more::before {
+/* 공지사항, 자려싱, 새소식, 인기사이트 더보기 링크 웹폰트 글자 색상 일괄 적용 */
+.more::before {
   color: hsla(110, 50%, 30%, 1);
 }
 .board-more[aria-labelledby="buttonArchive"] {
   display: none;
 }
+/* 새소식 */
+.news {
+  position: relative;
+  margin-top: 20px;
+}
+.news::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 80%;
+  height: 1px;
+  /* border image 이용해서도 구현해보기 */
+  background: #aaa linear-gradient(to right, #aaa, #fff);
+}
+.news-title {
+  color: #d16527;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.news-more {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+}
+.news-link {
+  display: block;
+  /* 차이 비교 */
+  /* border: 1px solid transparent; */
+}
+.news-item {
+  position: relative;
+  margin-top: 35px;
+  padding-left: 130px;
+  min-height: 115px;
+}
+.news-item-title {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.news-item-brief {
+  margin-top: 10px;
+  line-height: 1.5;
+  /* 텍스트 양쪽 정렬 */
+  text-align: justify;
+}
+.news-item-thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+.news-item-thumbnail img {
+  box-shadow: 0px 15px 15px 5px#aaa;
+}
+.news-item-thumbnail figcaption {
+  margin-top: 15px;
+}
+/* 
+.news-title {
+  color: #ed552f;
+  font-size: 20px;
+  font-weight: 700;
+}
+.news-title::after {
+  content: "";
+  display: block;
+  margin-top: 18px;
+  height: 2px;
+  background: #ccc linear-gradient(to right, #ccc, #fff);
+}
+.news-item {
+  margin-top: 18px;
+  position: relative;
+  font-size: 16px;
+}
+.news-item-title {
+  width: 250px;
+  float: right;
+  font-weight: 700;
+}
+.news-item-date {
+  width: 250px;
+  float: right;
+}
+
+ */
 
 /* 슬로건 */
 .slogan {
