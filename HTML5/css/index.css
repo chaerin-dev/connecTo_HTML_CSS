@@ -681,31 +681,29 @@ body {
   border: 1px solid #aaa;
   box-shadow: 5px 5px #aaa;
 }
+/* 관련 사이트 부분 */
 .related {
-  margin-top: 10px;
+  padding-top: 10px;
 }
 .related-list {
   margin-top: 10px;
   width: 100%;
-  height: 25px;
+  height: 27px;
   background-color: #fff;
   border: 1px solid #aaa;
   border-radius: 5px;
   overflow: hidden;
-  transition: height 0.2s, padding 0.5s;
+  transition: height 0.4s, padding 0.4s 0.2s;
 }
 .related-list:hover,
 .related-list:focus {
   height: 147px;
   padding: 10px 0;
 }
-.related-list li {
-  text-indent: 2rem;
-  height: 25px;
-}
 .related-list a {
   display: block;
   line-height: 25px;
+  padding: 0 0 0 20px;
 }
 
 /* 
