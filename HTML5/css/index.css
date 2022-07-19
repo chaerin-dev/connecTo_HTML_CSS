@@ -46,6 +46,19 @@ body {
   font-size: 1.4rem;
 }
 
+/* 스킵 네비게이션 */
+.skip-nav a {
+  padding: 8px;
+  display: hidden;
+  flex-flow: row nowrap;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+}
+.skip-nav a:focus {
+  display: flex;
+}
+
 /* 레이아웃 */
 .header,
 .visual,
@@ -707,48 +720,59 @@ body {
   padding: 0 0 0 20px;
 }
 
-/* 인기 사이트 */
+/* 인기사이트 */
 .favorite {
-  margin-top: 20px;
   position: relative;
+  margin-top: 20px;
 }
+
 .favorite-list {
   margin-top: 10px;
-  background-color: yellow;
-  list-style: none;
+  list-style-type: none;
 }
+
 .favorite-list li {
   position: relative;
-  background-color: pink;
   margin-top: 8px;
-  text-indent: 0.5rem;
-  counter-increment: inst;
+  counter-increment: number;
 }
-.favorite-list li:nth-child(n)::before {
-  content: counter(inst);
-  width: 17px;
-  height: 17px;
+
+.favorite-list li::before {
+  content: counter(number);
+  display: inline-flex;
+  padding: 2px 5px;
+  font-size: 1.1rem;
   color: #fff;
-  background-color: #aaa;
-  border-radius: 2px;
-  float: left;
+  background: #aaa;
+  border-radius: 4px;
+  min-width: 1.5em;
+  justify-content: center;
+  margin-right: 0.5em;
 }
+
+.favorite-list a {
+  vertical-align: middle;
+}
+
 .favorite-list em {
   position: absolute;
-  top: 50%;
-  right: 0;
   width: 9px;
   height: 11px;
-  transform: translateY(-50%);
-  background-image: url("./images/rank.png");
+  right: 0;
+  top: 50%;
+  margin-top: -5px;
+  background-image: url(./images/rank.png);
   background-repeat: no-repeat;
 }
-.favorite-list .down {
-  background-position: 0 -44px;
-}
+
 .favorite-list .stop {
-  background-position: 0 -26px;
+  background-position: 0 50%;
 }
+
+.favorite-list .down {
+  background-position: 0 100%;
+}
+
 .favorite-more {
   position: absolute;
   top: 2px;
