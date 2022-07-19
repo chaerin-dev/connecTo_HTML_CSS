@@ -619,7 +619,8 @@ body {
   border-bottom: 1px solid #aaa;
 }
 .event-title,
-.related-title {
+.related-title,
+.favorite-title {
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -706,33 +707,54 @@ body {
   padding: 0 0 0 20px;
 }
 
-/* 
-
-.event-button-prev,
-.event-button-next {
-  width: 18px;
-  height: 18px;
+/* 인기 사이트 */
+.favorite {
+  margin-top: 20px;
+  position: relative;
 }
-.event-button-prev {
-  background: url("../images/back_forward.png");
+.favorite-list {
+  margin-top: 10px;
+  background-color: yellow;
+  list-style: none;
 }
-
-.event::after {
-  display: block;
-  content: "";
-  width: 95%;
-  height: 1px;
-  margin: 10px auto;
+.favorite-list li {
+  position: relative;
+  background-color: pink;
+  margin-top: 8px;
+  text-indent: 0.5rem;
+  counter-increment: inst;
+}
+.favorite-list li:nth-child(n)::before {
+  content: counter(inst);
+  width: 17px;
+  height: 17px;
+  color: #fff;
   background-color: #aaa;
+  border-radius: 2px;
+  float: left;
 }
-.event-title,
-.related-title {
-  font-size: 18px;
-  font-weight: 700;
+.favorite-list em {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 9px;
+  height: 11px;
+  transform: translateY(-50%);
+  background-image: url("./images/rank.png");
+  background-repeat: no-repeat;
 }
-
-.related {
-} */
+.favorite-list .down {
+  background-position: 0 -44px;
+}
+.favorite-list .stop {
+  background-position: 0 -26px;
+}
+.favorite-more {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  padding: 8px;
+}
 
 /* 슬로건 */
 .slogan {
