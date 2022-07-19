@@ -601,51 +601,88 @@ body {
 .news-item-thumbnail figcaption {
   margin-top: 15px;
 }
-/* 
-.news-title {
-  color: #ed552f;
-  font-size: 20px;
-  font-weight: 700;
-}
-.news-title::after {
-  content: "";
-  display: block;
-  margin-top: 18px;
-  height: 2px;
-  background: #ccc linear-gradient(to right, #ccc, #fff);
-}
-.news-item {
-  margin-top: 18px;
-  position: relative;
-  font-size: 16px;
-}
-.news-item-title {
-  width: 250px;
-  float: right;
-  font-weight: 700;
-}
-.news-item-date {
-  width: 250px;
-  float: right;
-}
-
- */
 
 /* 신규 이벤트 및 관련 사이트 */
 .gradient-effect {
-  position: relative;
-  background: #ccc linear-gradient(to bottom, #ccc, #eee);
-  border: solid 1px #aaa;
+  border: 1px solid #aaa;
   border-radius: 5px;
   padding: 10px;
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
 }
-.event-button-wrapper {
+.accent-color {
+  color: #d16527;
+}
+.event {
   display: flex;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  gap: 10px;
+  align-items: start;
+  flex-flow: row wrap;
+  border-bottom: 1px solid #aaa;
 }
+.event-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+/* .event-button-wrapper {
+  display: flex;
+  gap: 6px;
+  overflow: hidden;
+  margin-left: auto;
+  height: 18px;
+  overflow: hidden;
+}
+.event button {
+  width: 19px;
+  height: 0 !important;
+  border: 0;
+  padding: 18px 0 0 0;
+  background-color: transparent;
+  background-image: url("./images/back_forward.png");
+  background-repeat: no-repeat;
+}
+.event button:focus {
+  outline-offset: -2px;
+}
+.event-button-next {
+  background-position: -36px 0;
+}
+*/
+
+.event-button-container {
+  display: flex;
+  flex-flow: row, nowrap;
+  gap: 6px;
+  padding: 4px;
+  margin-left: auto;
+  transform: translate(4px, -4px);
+}
+.event-button-container button {
+  width: 19px;
+  height: 18px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  background-image: url("./images/back_forward.png");
+  background-repeat: no-repeat;
+}
+.event-button-container .event-button-next {
+  background-position: -36px 0;
+}
+
+.event-detail {
+  width: 100%;
+}
+.event-thumbnail {
+  margin: 2px 0 10px;
+}
+.event-brief {
+  margin: 10px 0;
+}
+.event-thumbnail img {
+  border: 1px solid #aaa;
+  box-shadow: 5px 5px #aaa;
+}
+/* 
+
 .event-button-prev,
 .event-button-next {
   width: 18px;
@@ -654,12 +691,7 @@ body {
 .event-button-prev {
   background: url("../images/back_forward.png");
 }
-.event-thumbnail {
-  width: 160px;
-  height: 80px;
-  margin: 10px 0;
-  box-shadow: 5px 5px #aaa;
-}
+
 .event::after {
   display: block;
   content: "";
@@ -673,11 +705,9 @@ body {
   font-size: 18px;
   font-weight: 700;
 }
-.accent-color {
-  color: #ed552f;
-}
+
 .related {
-}
+} */
 
 /* 슬로건 */
 .slogan {
