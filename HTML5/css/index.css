@@ -618,7 +618,8 @@ body {
   flex-flow: row wrap;
   border-bottom: 1px solid #aaa;
 }
-.event-title {
+.event-title,
+.related-title {
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -667,7 +668,6 @@ body {
 .event-button-container .event-button-next {
   background-position: -36px 0;
 }
-
 .event-detail {
   width: 100%;
 }
@@ -681,6 +681,33 @@ body {
   border: 1px solid #aaa;
   box-shadow: 5px 5px #aaa;
 }
+.related {
+  margin-top: 10px;
+}
+.related-list {
+  margin-top: 10px;
+  width: 100%;
+  height: 25px;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: height 0.2s, padding 0.5s;
+}
+.related-list:hover,
+.related-list:focus {
+  height: 147px;
+  padding: 10px 0;
+}
+.related-list li {
+  text-indent: 2rem;
+  height: 25px;
+}
+.related-list a {
+  display: block;
+  line-height: 25px;
+}
+
 /* 
 
 .event-button-prev,
