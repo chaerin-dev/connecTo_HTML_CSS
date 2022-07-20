@@ -14,7 +14,11 @@
 /* 모든 디바이스 (All Device) */
 /* 공통 헤더 */
 .appHeader {
-  padding: 20px;
+  padding: var(--spacing-base) var(--spacing-md);
+  gap: var(--spacing-base);
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
 }
 /* 공통 로고 */
 .logo {
@@ -30,23 +34,47 @@
 /* 공통 안내링크 */
 .memberOnly {
   display: flex;
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
 }
 /* 공통 검색폼 */
 .searchForm__group {
-  background-color: pink;
   display: flex;
   flex-flow: row nowrap;
 }
-.formInput__input {
-  display: block;
-  width: 90%;
+.searchForm__group .formInput {
+  margin-right: var(--spacing-xs);
 }
-.formInput button {
-  display: block;
-  width: 10%;
+.searchForm .formInput__input {
+  width: 100%;
+  height: 2rem; /* 32px */
+  border: 1px solid var(--silver);
+  background: var(--white);
+  border-radius: 0.25rem; /* 4px */
+  padding: 0.125rem 0.75rem; /* 2px 12px */
+}
+.button {
+  cursor: pointer;
+  height: 2rem; /* 32px */
+  border-radius: 0.25rem; /* 4px */
+  padding: 0.125rem 0.75rem; /* 2px 12px */
+  white-space: nowrap;
+  font-size: var(--text-sm);
+}
+.button--none {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+}
+.button--outline {
+  background: transparent;
+  color: var(--secondary-color);
+  border: 1px solid currentColor;
+}
+.button--fill {
+  background: var(--secondary-color);
+  color: var(--white);
+  border: 0;
 }
 
 /* 모바일 디바이스 (Mobile Device) */
@@ -54,68 +82,66 @@
 뷰포트가 767px과 768px 사이일 때 레이아웃이 무너질 수 있음*/
 /* 해결 -> 모바일 디바이스의 max-width를 768px로 설정한 뒤 데스크탑 디바이스의 min-width를 768px로 재정의 */
 @media (min-width: 320px) and (max-width: 768px) {
+  /* 모바일 헤더 */
   .appHeader {
-    position: relative;
     background-color: var(--primary-color);
-  }
-  /* 안내링크 */
-  .memberOnly {
     color: var(--white);
   }
-  /* 검색폼 */
-  .searchForm {
-    width: 100%;
+  /* 모바일 안내링크 */
+  .memberOnly {
+    order: -1;
+    font-size: var(--text-sm);
   }
-  .searchForm__group {
-    display: block;
-    width: 100%;
+  /* 모바일 검색폼 */
+  .searchForm .formInput {
+    flex-grow: 1;
   }
-  /* 햄버거 버튼 */
+  /* 모바일 메인메뉴 제어버튼 */
   .button--burger {
     width: 35px;
     height: 35px;
-    padding: none !important;
+    position: absolute;
+    top: 3.75rem;
+    right: var(--spacing-md);
+    /* 
     background-color: transparent;
     border: none;
     cursor: pointer;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
-    position: absolute;
-    top: 30px;
-    right: 30px;
+    justify-content: space-between; */
   }
-  .button--burger span {
+  /* .button--burger span {
     display: block;
     width: 35px;
     height: 5px;
     background-color: var(--white);
-    border-radius: 5px;
-  }
+    border-radius: 5px; 
+  }*/
 }
 
 /* 데스크탑 디바이스 (Desktop Device) */
 @media (min-width: 768px) {
+  /* 데스크탑 헤더 */
   .appHeader {
-    background-color: var(--white);
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
   }
-  /* 안내링크 */
-  .memberOnly {
-    color: var(--black);
+  /* 데스크탑 로고 */
+  .logo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
-  /* 검색폼 */
-  .searchForm {
-    width: 50%;
-    float: right;
-  }
+  /* 데스크탑 검색폼 */
   .searchForm__group {
-    width: 100%;
+    justify-content: flex-end;
   }
-  /* .formInput__input {
-    display: inline-block;
-    width: 100%;
-  } */
-  /* 햄버거 버튼 */
+  .searchForm__group .formInput {
+    width: 400px;
+  }
+  /* 데스크탑 메인메뉴 제어버튼 */
   .button--burger {
     display: none;
   }
