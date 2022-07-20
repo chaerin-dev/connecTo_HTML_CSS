@@ -5,20 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>웹카페 - 반응형웹</title>
+    <!-- fontawesome 사용을 위햔 link 태그 -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
       crossorigin="anonymous"
     />
+    <!-- pretendard 글꼴 사용을 위햔 link 태그 -->
     <link
       rel="stylesheet"
       as="style"
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
     />
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/index.css" />
   </head>
 
-  <body></body>
+  <body>
+    <!-- 1. 헤더 -->
+    <header class="appHeader">
+      <!-- 헤더 - 로고 -->
+      <h1 class="logo">
+        <!-- class 네이밍: BEM 표기법 -->
+        <a href="./main.html" class="logo__link" aria-label="Web Cafe"></a>
+      </h1>
+      <!-- 헤더 - 안내링크 -->
+      <ul class="memberOnly">
+        <li><a href="/">로그인</a></li>
+        <!-- divider는 여기저기서 반복해서 사용되는 컴포넌트이므로 memberOnly__divider가 아닌 그냥 divider로 네이밍 -->
+        <li><span class="divider" aria-hidden="true">ㅣ</span><a href="/">회원가입</a></li>
+        <li><span class="divider" aria-hidden="true">ㅣ</span><a href="/">커뮤니티</a></li>
+      </ul>
+      <!-- 헤더 - 검색 폼 -->
+      <form action="https://formspree.io/seulbinim@gmail.com" method="POST" class="searchForm">
+        <fieldset>
+          <legend>검색</legend>
+          <div class="searchForm__group">
+            <!-- form 컴포넌트 -->
+            <div class="formInput">
+              <!-- a11yHidden: screen reader에서만 읽히는 부분 -->
+              <label for="search" class="a11yHidden formInput__label">검색어</label>
+              <input
+                id="search"
+                class="formInput__input"
+                type="search"
+                required
+                placeholder="검색어를 입력하세요."
+                name="search"
+              />
+            </div>
+            <!-- 내부가 칠해진 button이므로 button--fill로 클래스 네이밍 -->
+            <button type="submit" class="button button--primary button--fill">검색</button>
+          </div>
+        </fieldset>
+      </form>
+      <!-- 헤더 - 햄버거 버튼 -->
+      <!-- 메뉴가 열린 이후에 aria-label="메뉴 닫기"로 변경되어야 함 -> script 역할 -->
+      <button class="buttonNone button--burger" aria-label="메뉴 열기">
+        <!-- 애니메이션을 위한 햄버거 버튼 분리 -->
+        <span class="button--burgerBarTop"></span>
+        <span class="button--burgerBarMiddle"></span>
+        <span class="button--burgerBarBottom"></span>
+      </button>
+    </header>
+  </body>
 </html>

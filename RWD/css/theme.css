@@ -1,4 +1,4 @@
-:root{
+:root {
   --white: #fff;
   --black: #000;
   --silver: #767676;
@@ -13,11 +13,10 @@
   --brown: #988574;
   --blue: #6aaee6;
 
+  /* 변수 재할당: 색상 일괄 변경 용이 */
   --accent-book: var(--green);
   --accent-news: var(--yellow);
   --accent-board: var(--brown);
   --accent-favorite: var(--orange);
   --accent-twitter: var(--blue);
 }
-
-

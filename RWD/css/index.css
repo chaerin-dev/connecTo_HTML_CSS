@@ -1,0 +1,7 @@
+/* CSS에서의 @import: 순차적으로 다운로드 받음 -> 렌더링 속도 저하 */
+/* 대안: HTML에서 따로 불러움 -> 병렬적으로 다운로드 */
+/* Sass: 어차피 하나의 파일로 병함되므로 문제 없음 */
+@import url(./normalize.css);
+@import url(./a11y.css);
+@import url(./theme.css);
+@import url(./base.css);
