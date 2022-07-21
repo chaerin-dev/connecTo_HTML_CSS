@@ -102,26 +102,38 @@ input[type="search"] {
   }
   /* 모바일 메인메뉴 제어버튼 */
   .button--burger {
-    width: 35px;
-    height: 35px;
+    width: 50px;
+    height: 50px;
     position: absolute;
     top: 3.75rem;
     right: var(--spacing-md);
-    /* 
-    background-color: transparent;
-    border: none;
     cursor: pointer;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between; */
+    justify-content: space-between;
+    overflow: hidden;
   }
-  /* .button--burger span {
+  .button--burger span {
     display: block;
-    width: 35px;
-    height: 5px;
+    width: 50px;
+    height: 10px;
     background-color: var(--white);
-    border-radius: 5px; 
-  }*/
+    border-radius: 5px;
+  }
+  .button--burger.is--active .button--burgerBarTop,
+  .button--burger.is--active .button--burgerBarMiddle,
+  .button--burger.is--active .button--burgerBarBottom {
+    transition: transform 0.5s;
+  }
+  .button--burger.is--active .button--burgerBarTop {
+    transform: translateY(20px) rotate(45deg);
+  }
+  .button--burger.is--active .button--burgerBarMiddle {
+    transform: translateX(-100%);
+  }
+  .button--burger.is--active .button--burgerBarBottom {
+    transform: translateY(-20px) rotate(-45deg);
+  }
 }
 
 /* 데스크탑 디바이스 (Desktop Device) */
