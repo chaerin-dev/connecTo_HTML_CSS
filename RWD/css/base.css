@@ -34,8 +34,7 @@ img {
   height: auto;
 }
 
-video,
-iframe {
+video {
   /* 해상도 문제 생기지 않으므로  */
   width: 100%;
   height: auto;
