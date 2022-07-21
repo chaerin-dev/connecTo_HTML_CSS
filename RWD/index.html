@@ -61,13 +61,26 @@
         </fieldset>
       </form>
       <!-- 헤더 - 햄버거 버튼 -->
-      <!-- 메뉴가 열린 이후에 aria-label="메뉴 닫기"로 변경되어야 함 -> script 역할 -->
-      <button class="button--none button--burger" aria-label="메뉴 열기">
-        <!-- 애니메이션을 위한 햄버거 버튼 분리 -->
-        <span class="button--burgerBarTop"></span>
-        <span class="button--burgerBarMiddle"></span>
-        <span class="button--burgerBarBottom"></span>
-      </button>
+      <div class="buttonWrapper">
+        <!-- 메뉴가 열린 이후에 aria-label="메뉴 닫기"로 변경되어야 함 -> script 역할 -->
+        <button class="button--none button--burger" aria-label="메뉴 열기">
+          <!-- 애니메이션을 위한 햄버거 버튼 분리 -->
+          <span class="button--burgerBarTop"></span>
+          <span class="button--burgerBarMiddle"></span>
+          <span class="button--burgerBarBottom"></span>
+        </button>
+      </div>
     </header>
+    <!-- 2. 네비게이션 -->
+    <nav class="appNavigation menu is--active">
+      <h2 class="a11yHidden">메인 메뉴</h2>
+      <ul class="menu__list">
+        <li class="menu__item"><a href="/" class="menu__link">HTML에 대해</a></li>
+        <li class="menu__item"><a href="/" class="menu__link">CSS에 대해</a></li>
+        <li class="menu__item"><a href="/" class="menu__link">웹표준/웹접근성</a></li>
+        <li class="menu__item"><a href="/" class="menu__link">묻고 답하기</a></li>
+        <li class="menu__item"><a href="/" class="menu__link">자료실</a></li>
+      </ul>
+    </nav>
   </body>
 </html>

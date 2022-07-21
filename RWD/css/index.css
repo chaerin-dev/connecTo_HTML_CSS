@@ -80,6 +80,11 @@ input[type="search"] {
   color: var(--white);
   border: 0;
 }
+/* 공통 네비게이션 */
+.menu__list {
+  display: flex;
+  font-size: var(--text-md);
+}
 
 /* 모바일 디바이스 (Mobile Device) */
 /* 모바일 디바이스의 max-width를 767px로 설정하고 데스크탑 디바이스의 min-width를 768로 설정할 경우
@@ -152,6 +157,27 @@ input[type="search"] {
     top: 50%;
     transform: rotate(-45deg);
   }
+  /* 모바일 네비게이션 */
+  .appNavigation {
+    width: 70%;
+    height: 100%;
+    padding: 50px;
+    background-color: var(--green);
+    opacity: 80%;
+    position: absolute;
+    top: 0;
+    left: -70%;
+    transition: transform 0.5s;
+  }
+  .menu__list {
+    flex-flow: column nowrap;
+  }
+  .menu__item {
+    margin-bottom: var(--spacing-xl);
+  }
+  .appNavigation.is--active {
+    transform: translateX(100%);
+  }
 }
 
 /* 데스크탑 디바이스 (Desktop Device) */
@@ -178,6 +204,19 @@ input[type="search"] {
   /* 데스크탑 메인메뉴 제어버튼 */
   .button--burger {
     display: none;
+  }
+  /* 데스크탑 네비게이션 */
+  .appNavigation {
+    width: 100%;
+    height: 15px;
+    padding: 50px;
+    background-color: var(--secondary-color);
+  }
+  .menu__list {
+    flex-flow: row nowrap;
+  }
+  .menu__item {
+    /* margin-bottom: var(--spacing-xl); */
   }
 }
 
