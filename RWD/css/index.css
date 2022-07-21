@@ -14,7 +14,7 @@
 /* 모든 디바이스 (All Device) */
 /* 공통 헤더 */
 .appHeader {
-  padding: var(--spacing-base) var(--spacing-md);
+  padding: var(--spacing-base) var(--spacing-lg);
   gap: var(--spacing-base);
   position: relative;
   display: flex;
@@ -87,6 +87,53 @@ input[type="search"] {
   font-size: var(--text-md);
   font-weight: 700;
 }
+/* 공통 메인 콘텐츠 */
+.appMain {
+  padding: var(--spacing-base) var(--spacing-lg);
+}
+/* 공통 메인 콘텐츠 섹션 제목 */
+.appMain h2 {
+  /* height: 4rem; */
+  /* margin-bottom: var(--spacing-sm); */
+  padding: var(--spacing-sm) 0;
+  background: url("./../images/sprite_main.png") no-repeat;
+  text-indent: 4rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+.appMain h2 span {
+  font-size: var(--text-sm);
+}
+.accentBook {
+  color: var(--accent-book);
+}
+.appMain .spriteNews {
+  background-position: 0 -115px;
+}
+.accentNews {
+  color: var(--accent-news);
+}
+.appMain .spriteBoard {
+  background-position: 0 -230px;
+}
+.accentBoard {
+  color: var(--accent-board);
+}
+.appMain .spriteFavorite {
+  background-position: 0 -345px;
+}
+.accentFavorite {
+  color: var(--accent-favorite);
+}
+.appMain .spriteTwitter {
+  background-position: 0 -460px;
+}
+.accentTwitter {
+  color: var(--accent-twitter);
+}
 
 /* 모바일 디바이스 (Mobile Device) */
 /* 모바일 디바이스의 max-width를 767px로 설정하고 데스크탑 디바이스의 min-width를 768로 설정할 경우
@@ -111,7 +158,7 @@ input[type="search"] {
   .buttonWrapper {
     position: absolute;
     top: 3.75rem;
-    right: var(--spacing-md);
+    right: var(--spacing-lg);
     padding: 0.25rem;
     overflow: hidden;
     transform: translate(0.25rem, -0.25rem);
@@ -172,7 +219,7 @@ input[type="search"] {
     width: 70%;
     height: 100vh;
     backdrop-filter: blur(4px);
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg);
     transform: translateX(-150%);
     transition: all 300ms;
   }
@@ -215,7 +262,7 @@ input[type="search"] {
   }
   /* 데스크탑 메인메뉴 */
   .menu {
-    padding: var(--spacing-base) var(--spacing-md);
+    padding: var(--spacing-base) var(--spacing-lg);
     background-color: var(--secondary-color);
   }
   .menu__list {
@@ -231,6 +278,12 @@ input[type="search"] {
   .menu__link {
     color: var(--white);
     text-shadow: 1px 1px 0 var(--black), -1px -1px 0 var(--black);
+  }
+  /* 데스크탑 메인 콘텐츠 */
+  .appMain {
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
