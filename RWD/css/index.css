@@ -140,6 +140,14 @@ input[type="search"] {
 .accentTwitter {
   color: var(--accent-twitter);
 }
+/* 공통 추천서적 */
+.book__cover,
+.book__info {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  line-height: 2rem;
+}
 
 /* 모바일 디바이스 (Mobile Device) */
 /* 모바일 디바이스의 max-width를 767px로 설정하고 데스크탑 디바이스의 min-width를 768로 설정할 경우
