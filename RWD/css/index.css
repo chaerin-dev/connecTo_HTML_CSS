@@ -192,6 +192,41 @@ input[type="search"] {
   width: 100%;
   height: 100%;
 }
+/* 공통 게시판 */
+.board {
+  position: relative;
+}
+.board__item {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: var(--spacing-md);
+}
+.board__link {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+}
+.board__date {
+  white-space: nowrap;
+  margin-left: var(--spacing-xs);
+}
+.board__more {
+  position: absolute;
+  padding: 8px;
+  top: -8px;
+  right: -8px;
+}
+/* 공통 인기 사이트 */
+.favorite__item {
+  margin-top: var(--spacing-md);
+}
+.favorite__link {
+  display: block;
+}
+.fa-external-link-alt {
+  margin-right: var(--spacing-xs);
+}
 
 /* 모바일 디바이스 (Mobile Device) */
 /* 모바일 디바이스의 max-width를 767px로 설정하고 데스크탑 디바이스의 min-width를 768로 설정할 경우
@@ -290,6 +325,15 @@ input[type="search"] {
   }
   .appNavigation.is--active {
     transform: none;
+  }
+  /* 모바일 인기 사이트 */
+  /* 공통 인기 사이트 */
+  .favorite__link::after {
+    content: attr(data-tooltip);
+    font-size: var(--text-base);
+    color: var(--accent-favorite);
+    margin-left: var(--spacing-xs);
+    line-height: var(--text-base);
   }
 }
 
