@@ -222,13 +222,10 @@ input[type="search"] {
 }
 /* 공통 인기 사이트 */
 .favorite__item {
-  margin-top: var(--spacing-md);
+  margin-top: var(--spacing-xs);
 }
 .favorite__link {
   display: block;
-}
-.fa-external-link-alt {
-  margin-right: var(--spacing-xs);
 }
 
 /* 모바일 디바이스 (Mobile Device) */
@@ -330,13 +327,11 @@ input[type="search"] {
     transform: none;
   }
   /* 모바일 인기 사이트 */
-  /* 공통 인기 사이트 */
   .favorite__link::after {
     content: attr(data-tooltip);
-    font-size: var(--text-base);
+    font-size: var(--text-sm);
     color: var(--accent-favorite);
     margin-left: var(--spacing-xs);
-    line-height: var(--text-base);
   }
 }
 
