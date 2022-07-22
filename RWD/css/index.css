@@ -227,6 +227,24 @@ input[type="search"] {
 .favorite__link {
   display: block;
 }
+/* 공통 트위터 */
+.twitter__userProfile {
+  width: 100px;
+  height: 100px;
+  border: solid 1px var(--silver);
+  border-radius: 50%;
+  overflow: hidden;
+  float: right;
+  shape-outside: circle(50%);
+  margin-left: var(--spacing-xs);
+}
+.twitter__userInfo dd {
+  display: inline;
+}
+.twitter__date {
+  display: block;
+  margin-top: var(--spacing-xs);
+}
 
 /* 모바일 디바이스 (Mobile Device) */
 /* 모바일 디바이스의 max-width를 767px로 설정하고 데스크탑 디바이스의 min-width를 768로 설정할 경우
