@@ -241,9 +241,8 @@ input[type="search"] {
   height: 100%;
   object-fit: cover;
   /* object-position: center; */
-  object-position: left;
+  object-position: 30% 40%;
 }
-
 .twitter__userInfo {
   display: inline-flex;
   gap: var(--spacing-xs);
